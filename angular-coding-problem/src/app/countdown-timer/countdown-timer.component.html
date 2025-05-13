@@ -1,0 +1,7 @@
+<div class="countdown-container">
+  <div class="countdown-card">
+    <h2>⏳ Seconds left to deadline:</h2>
+    <div class="seconds" *ngIf="secondsLeft$ | async as seconds">{{ seconds }}</div>
+  </div>
+</div>
+

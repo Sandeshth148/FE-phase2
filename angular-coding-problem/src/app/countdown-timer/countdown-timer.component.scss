@@ -1,0 +1,31 @@
+// Variables
+$primary-color: #007acc;
+$bg-color: #f9f9f9;
+$card-bg: #fff;
+$card-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+$font-size-large: 3rem;
+$border-radius: 12px;
+$padding: 2rem 3rem;
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: $bg-color;
+}
+
+.countdown-card {
+  background: $card-bg;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  text-align: center;
+}
+
+.seconds {
+  font-size: $font-size-large;
+  font-weight: bold;
+  color: $primary-color;
+  margin-top: 1rem;
+}
