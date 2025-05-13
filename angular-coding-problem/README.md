@@ -6,16 +6,20 @@ A self-contained, performance-optimized Angular 16 standalone component that dis
 
 ## 📚 Contents
 
-- [Stack](#-stack)
-- [Problem Statement](#-problem-statement)
-- [Live Demo](#-live-demo)
-- [Screenshots](#-screenshots)
-- [How to Run Locally](#-how-to-run-locally)
-- [How It Works](#-how-it-works)
-- [Unit Tests](#-unit-tests)
-- [Architecture Decisions](#-architecture-decisions)
-- [Future Enhancements](#-future-enhancements)
-- [Author](#-author)
+- [⏳ Task 1 – Countdown Timer (Angular)](#-task-1--countdown-timer-angular)
+  - [📚 Contents](#-contents)
+  - [📦 Stack](#-stack)
+  - [🧠 Problem Statement](#-problem-statement)
+  - [🚀 Live Demo](#-live-demo)
+  - [🧪 Screenshots](#-screenshots)
+  - [🛠️ How to Run Locally](#️-how-to-run-locally)
+  - [🧰 How It Works](#-how-it-works)
+    - [✅ `DeadlineService`](#-deadlineservice)
+    - [✅ CountdownTimerComponent](#-countdowntimercomponent)
+    - [✅ Unit Tests](#-unit-tests)
+    - [✨ Architecture Decisions](#-architecture-decisions)
+  - [👋 Author](#-author)
+    - [Sandesh](#sandesh)
 
 ---
 
@@ -38,7 +42,7 @@ A self-contained, performance-optimized Angular 16 standalone component that dis
 
 ## 🚀 Live Demo
 
-📍 [Live App Link (https://sandeshth148.github.io./frontend-coding-phase-2/)](https://sandeshth148.github.io/frontend-coding-phase-2/)  
+📍 [Live App Link (https://sandeshth148.github.io/FE-phase2/)](https://sandeshth148.github.io/FE-phase2/)  
 📷 Screenshots below ↓
 
 ---
@@ -54,8 +58,8 @@ A self-contained, performance-optimized Angular 16 standalone component that dis
 ## 🛠️ How to Run Locally
 
 ```bash
-git clone https://github.com/Sandeshth148/frontend-coding-phase-2.git
-cd task1-angular
+git clone https://github.com/Sandeshth148/FE-phase2.git
+cd .\angular-coding-problem\ 
 npm install
 ng serve -o
 ```
