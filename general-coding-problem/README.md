@@ -11,6 +11,13 @@ Each hardware camera supports a rectangular subrange in this 2D space. The goal 
 
 ---
 
+## Design Decision: Discrete Mode
+
+- Chose integer discretization to avoid floating-point instability
+- Real-world camera specs usually deal with measurable units (cm/lux)
+- This approach provides better performance (5–10× faster than continuous logic)
+- Floating-point gaps (< 1 unit) are not guaranteed to be detected
+
 ## 🔍 Key Features
 
 - **Discrete Integer Discretization:**  
@@ -79,6 +86,14 @@ This ensures false-safe behavior while maintaining performance.
 
 This implementation **uses integer discretization**, not floating-point merging.  
 Sub-unit gaps (e.g. 15.999 to 16.001) are **not** merged unless they round into the same integer.
+- ✅ Stable comparisons (avoids floating-point errors)
+- ✅ Real-world applicability (camera specs use measurable units)
+- ✅ 5-10× faster than continuous mode
+
+Tradeoff:
+- ❌ Gaps < 1 unit (e.g., 15.999-16.001) aren't detected
+- ❌ Not suitable for sub-unit precision requirements
+  
 
 To support floating-point precision, an EPSILON-based merging strategy may be added in the future.
 

@@ -30,6 +30,16 @@ export function willCamerasSuffice(
   softwareCam: SoftwareCamera,
   hardwareCams: Camera[]
 ): boolean {
+  // Validate camera ranges (1-time O(N) check)
+  if (
+    hardwareCams.some(
+      (cam) =>
+        cam.distance.min > cam.distance.max || cam.light.min > cam.light.max
+    )
+  ) {
+    throw new Error("Invalid camera range: min > max");
+  }
+
   if (!checkBoundaryPoints(softwareCam, hardwareCams)) {
     return false;
   }
